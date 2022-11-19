@@ -1,9 +1,17 @@
 from PIL import Image
 import pytesseract
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Users\USER_NAME\AppData\Local\Tesseract-OCR\tesseract.exe'
+print('Type the path to the file')
+print('example: C:\Users\USER_NAME\AppData\Local\Tesseract-OCR\tesseract.exe')
 
-img = Image.open('example.png')
+user_path = input(r'')
+
+pytesseract.pytesseract.tesseract_cmd = user_path
+
+print('Please put your picture in the same folder as your python code')
+user_image = input('Type name of the .png file')
+
+img = Image.open(user_image)
 text = pytesseract.image_to_string(img)
 
 print(text)
