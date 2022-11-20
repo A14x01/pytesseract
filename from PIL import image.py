@@ -2,7 +2,7 @@ from PIL import Image
 import pytesseract
 
 print('Type the path to the file')
-print('example: C:\Users\USER_NAME\AppData\Local\Tesseract-OCR\tesseract.exe')
+print("Example: E:/x/x/x.exe")
 
 user_path = input(r'')
 
