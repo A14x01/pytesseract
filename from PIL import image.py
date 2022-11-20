@@ -1,17 +1,26 @@
 from PIL import Image
 import pytesseract
 
-print('Type the path to the file')
-print("Example: E:/x/x/x.exe")
+print('This python code can read text from files and convert it to just a text')
 
-user_path = input(r'')
+while True:
+    try:
 
-pytesseract.pytesseract.tesseract_cmd = user_path
+        print('Type the path to the file: ')
+        print("Example: E:/x/x/x.exe")
 
-print('Please put your picture in the same folder as your python code')
-user_image = input('Type name of the .png file')
+        user_path = input(r'')
 
-img = Image.open(user_image)
-text = pytesseract.image_to_string(img)
+        pytesseract.pytesseract.tesseract_cmd = user_path
 
-print(text)
+        print('Please put your picture in the same folder as your python code')
+        user_image = input('Type name of the .png file:\n')
+
+        img = Image.open(user_image)
+        text = pytesseract.image_to_string(img)
+
+        print(text)
+        break
+    except:
+        print("Wrong path to file or name of the .png file")
+        continue
