@@ -4,7 +4,7 @@ import pytesseract
 print('This python code can read text from files and convert it to just a text')
 
 while True:
-    print('If you want to contineu type (1).\nIf you want to exit type (2)')
+    print('If you want to continue type (1).\nIf you want to exit type (2)')
     user_answer = input('')
     if user_answer == '1':
         try:
